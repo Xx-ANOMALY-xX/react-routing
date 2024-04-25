@@ -1,12 +1,12 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 const Nav = () => {
   return (
     <nav>
-        <Link to="/">Home</Link>
-        <Link to="/create">create</Link>
-        <Link to="/show">show</Link>
+        <NavLink style={(e)=> e.isActive === true ? {color: "pink"} : {color: "black"}} to="/">Home</NavLink>
+        <NavLink style={(e)=> e.isActive === true ? {color: "pink"} : {color: "black"}} to="/create">create</NavLink>
+        <NavLink style={(e)=> e.isActive === true ? {color: "pink"} : {color: "black"}} to="/show">show</NavLink>
     </nav>
   )
 }
